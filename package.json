@@ -1,0 +1,25 @@
+{
+  "name": "learn-ramda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lesson1": "jest --watch lesson1.spec",
+    "lesson2": "jest --watch lesson2.spec",
+    "lesson3": "jest --watch lesson3.spec",
+    "lesson4": "jest --watch lesson4.spec",
+    "lesson5": "jest --watch lesson5.spec",
+    "lesson6": "jest --watch lesson6.spec",
+    "lesson7": "jest --watch lesson7.spec",
+    "lesson8": "jest --watch lesson8.spec",
+    "lesson9": "jest --watch lesson9.spec",
+    "lesson10": "jest --watch lesson10.spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ramda": "^0.27.1"
+  }
+}
