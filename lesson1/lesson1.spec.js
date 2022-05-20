@@ -37,10 +37,10 @@ describe('Mutability', () => {
 
 describe('Immutability', () => {
   function removeLastElement(arr) {
-    // make this function immutable!
+    return R.dropLast(1, arr);
   }
 
-  xit('should mutate the array', () => {
+  it('should mutate the array', () => {
     const arr1 = [1, 2, 3];
     const arr2 = removeLastElement(arr1);
 
@@ -51,10 +51,10 @@ describe('Immutability', () => {
   });
 
   function setNameToBob(obj) {
-    // make this function immutable!
+    return R.assoc('name', 'Bob', obj);
   }
 
-  xit('should mutate the array', () => {
+  it('should mutate the array', () => {
     const obj1 = { profession: 'Builder' };
     const obj2 = setNameToBob(obj1);
 
@@ -65,23 +65,23 @@ describe('Immutability', () => {
   });
 });
 
-const multiply = (a, b) => {};
-const double = (b) => {};
+const multiply = R.curry((a, b) => a * b);
+const double = R.curry((b) => b * 2);
 
 describe('Currying', () => {
-  xit('should multiply the numbers', () => {
+  it('should multiply the numbers', () => {
     const res = multiply(2, 3);
 
     expect(res).toBe(6);
   });
 
-  xit('should curry multiplys parameters', () => {
+  it('should curry multiplys parameters', () => {
     const res = multiply(2)(3);
 
     expect(res).toBe(6);
   });
 
-  xit('should double a number', () => {
+  it('should double a number', () => {
     const res = double(3);
 
     expect(res).toBe(6);
